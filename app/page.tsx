@@ -3,29 +3,33 @@ type Project = {
   category: string;
   summary: string;
   outcome: string;
+  href: string;
 };
 
 const projects: Project[] = [
   {
-    title: "Banking App Onboarding",
-    category: "Fintech UX",
+    title: "Portfolio Presentation",
+    category: "UX Portfolio",
     summary:
-      "Redesigned a confusing first-time user flow into a guided onboarding experience with clearer steps and lower friction.",
-    outcome: "Mock result: onboarding completion improved by 28%.",
+      "A presentation-style portfolio showcasing selected design work, visual thinking, and a structured storytelling approach.",
+    outcome: "View the interactive Figma prototype.",
+    href: "https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2",
   },
   {
-    title: "Health Dashboard",
-    category: "Dashboard UX",
+    title: "Case Study Collection",
+    category: "UX Case Studies",
     summary:
-      "Simplified a dense analytics interface into a cleaner, priority-driven dashboard for faster decision-making.",
-    outcome: "Mock result: key task completion time reduced by 35%.",
+      "A placeholder section for your upcoming case studies, product redesigns, research work, and interaction design projects.",
+    outcome: "Replace this with your next featured project.",
+    href: "https://www.behance.net/pedrambehnood",
   },
   {
-    title: "E-commerce Checkout",
-    category: "Commerce UX",
+    title: "Professional Profile",
+    category: "Experience",
     summary:
-      "Reworked product comparison and checkout to reduce hesitation, surface trust signals, and streamline payment.",
-    outcome: "Mock result: checkout drop-off reduced by 19%.",
+      "A space to connect your design portfolio with your professional background, experience, and collaborations.",
+    outcome: "See your LinkedIn profile.",
+    href: "https://www.linkedin.com/in/pbehnood/",
   },
 ];
 
@@ -74,7 +78,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:py-28">
         <div className="flex flex-col justify-center">
           <span className="mb-5 inline-flex w-fit rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-            UX Designer • Product Thinker • Portfolio Template
+            UX Designer • Product Thinker • Portfolio
           </span>
 
           <h1 className="max-w-3xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
@@ -82,9 +86,9 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            I’m Pedram Behnood, a UX designer focused on simplifying complex
-            products and shaping user-centered digital experiences. This homepage
-            uses editable mock content so you can swap in your real case studies later.
+            I&apos;m Pedram Behnood, a UX designer focused on simplifying complex
+            products and shaping user-centered digital experiences. Explore my work,
+            professional background, and portfolio presentation below.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -95,17 +99,19 @@ export default function Home() {
               View Projects
             </a>
             <a
-              href="#contact"
+              href="https://www.behance.net/pedrambehnood"
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 transition hover:-translate-y-0.5"
             >
-              Let&apos;s Connect
+              View Behance
             </a>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
             {[
-              ["3", "Case studies"],
-              ["4+", "Years experience"],
+              ["1", "Live portfolio prototype"],
+              ["2", "Professional profiles"],
               ["10", "Core skills"],
             ].map(([value, label]) => (
               <div
@@ -124,34 +130,38 @@ export default function Home() {
             <div className="grid gap-4 rounded-[24px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 p-5 text-white">
               <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                 <div className="mb-2 text-xs uppercase tracking-[0.2em] text-white/70">
-                  Featured Case Study
+                  Featured Project
                 </div>
-                <div className="text-2xl font-bold">Banking App Onboarding</div>
+                <div className="text-2xl font-bold">Figma Portfolio Presentation</div>
                 <div className="mt-3 text-sm leading-6 text-white/85">
-                  A cleaner setup flow with stronger guidance, fewer drop-offs, and
-                  better first-use confidence.
+                  An interactive portfolio prototype that presents selected work,
+                  visual direction, and structured storytelling.
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-2xl bg-white p-4 text-slate-900">
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                    Research
+                    Platform
                   </div>
-                  <div className="mt-2 text-lg font-bold">Interviews + Flows</div>
+                  <div className="mt-2 text-lg font-bold">Figma Prototype</div>
                 </div>
                 <div className="rounded-2xl bg-white p-4 text-slate-900">
                   <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                    Outcome
+                    Explore
                   </div>
-                  <div className="mt-2 text-lg font-bold">+28% Completion</div>
+                  <div className="mt-2 text-lg font-bold">Behance + LinkedIn</div>
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-white/10 p-4 text-sm text-white/85 backdrop-blur">
-                Replace this panel later with your real screenshots, exported mockups,
-                or a cover image from Figma.
-              </div>
+              <a
+                href="https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl bg-white/10 p-4 text-sm font-semibold text-white/90 backdrop-blur hover:bg-white/15"
+              >
+                Open Figma portfolio →
+              </a>
             </div>
           </div>
         </div>
@@ -160,8 +170,7 @@ export default function Home() {
       <section id="work" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-3xl font-bold">Selected Work</h2>
         <p className="mt-3 max-w-2xl text-slate-600">
-          Placeholder case studies that you can replace with real project details,
-          outcomes, and visuals.
+          A starting point for showing your live portfolio, design presence, and future case studies.
         </p>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -176,8 +185,13 @@ export default function Home() {
               <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
               <p className="mt-3 leading-7 text-slate-600">{project.summary}</p>
               <p className="mt-4 text-sm font-semibold text-slate-900">{project.outcome}</p>
-              <a href="#" className="mt-5 inline-block font-semibold text-slate-900">
-                View case study →
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-block font-semibold text-slate-900"
+              >
+                Open link →
               </a>
             </article>
           ))}
@@ -189,23 +203,51 @@ export default function Home() {
           <h2 className="text-3xl font-bold">About</h2>
           <p className="mt-4 leading-8 text-slate-600">
             I design digital products with a focus on clarity, usability, and business
-            impact. My process usually begins with understanding users, mapping pain
-            points, and turning complex requirements into clear experiences.
+            impact. My process starts with understanding users, mapping pain points,
+            and turning complex requirements into clear, effective experiences.
           </p>
           <p className="mt-4 leading-8 text-slate-600">
-            This version is intentionally written with editable mock content so it can
-            act as your real portfolio starter.
+            This site is a clean portfolio base connected to my Behance, LinkedIn,
+            and Figma presentation so it can grow into a fuller case-study portfolio over time.
           </p>
         </div>
 
         <div className="rounded-3xl border border-slate-200 bg-slate-900 p-8 text-white shadow-sm">
-          <h3 className="text-2xl font-bold">What this starter is ready for</h3>
+          <h3 className="text-2xl font-bold">Where to find more of my work</h3>
           <ul className="mt-5 space-y-3 text-white/85">
-            <li>• GitHub version control</li>
-            <li>• Vercel deployment</li>
-            <li>• Custom domain connection</li>
-            <li>• SEO metadata</li>
-            <li>• Fast edits later</li>
+            <li>
+              • Behance:{" "}
+              <a
+                href="https://www.behance.net/pedrambehnood"
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
+                behance.net/pedrambehnood
+              </a>
+            </li>
+            <li>
+              • LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/in/pbehnood/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
+                linkedin.com/in/pbehnood
+              </a>
+            </li>
+            <li>
+              • Figma:{" "}
+              <a
+                href="https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2"
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
+                Portfolio prototype
+              </a>
+            </li>
           </ul>
         </div>
       </section>
@@ -226,29 +268,36 @@ export default function Home() {
 
       <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
         <div className="rounded-[32px] bg-slate-900 px-8 py-12 text-center text-white">
-          <h2 className="text-3xl font-bold">Let’s build something meaningful</h2>
+          <h2 className="text-3xl font-bold">Let’s connect</h2>
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-white/80">
-            Replace these links with your real email, LinkedIn, and portfolio case studies.
+            You can reach me through LinkedIn, explore my visual work on Behance,
+            or view my portfolio presentation on Figma.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:hello@pedrambehnood.com"
-              className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
-            >
-              hello@pedrambehnood.com
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/in/pbehnood/"
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
             >
               LinkedIn
             </a>
             <a
-              href="#"
+              href="https://www.behance.net/pedrambehnood"
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
             >
               Behance
+            </a>
+            <a
+              href="https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
+            >
+              Figma Portfolio
             </a>
           </div>
         </div>

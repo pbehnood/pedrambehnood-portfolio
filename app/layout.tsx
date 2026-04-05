@@ -14,11 +14,11 @@ export const metadata: Metadata = {
     template: "%s | Pedram Behnood",
   },
   description:
-    "UX designer portfolio featuring selected case studies, product thinking, research, and interface design.",
+    "Portfolio of Pedram Behnood, featuring UX design work, Behance projects, LinkedIn profile, and Figma portfolio presentation.",
   openGraph: {
     title: "Pedram Behnood — UX Designer",
     description:
-      "UX designer portfolio featuring selected case studies, product thinking, research, and interface design.",
+      "Portfolio of Pedram Behnood, featuring UX design work, Behance projects, LinkedIn profile, and Figma portfolio presentation.",
     url: "https://www.pedrambehnood.com",
     siteName: "Pedram Behnood Portfolio",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pedram Behnood — UX Designer",
     description:
-      "UX designer portfolio featuring selected case studies, product thinking, research, and interface design.",
+      "Portfolio of Pedram Behnood, featuring UX design work, Behance projects, LinkedIn profile, and Figma portfolio presentation.",
   },
 };
 
