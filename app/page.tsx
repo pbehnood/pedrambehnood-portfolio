@@ -21,14 +21,14 @@ const projects = [
     tag: "Product UX",
     description:
       "A marketplace UX case study focused on engagement, clearer flows, and stronger value for both users and studios.",
-    image: "/case-studies/bruce-case1/hero-img.webp",
+    image: "/case-studies/bruce-case1/Cover.png",
     href: "/work/bruce-app-ux",
   },
   {
-    title: "Shopping Flow Optimization",
-    tag: "Commerce UX",
+    title: "To be updated",
+    tag: "Web application",
     description:
-      "Improved the browse-to-buy journey across mobile and desktop with simpler comparison and checkout moments.",
+      "This card will be upated with a case study that I have done before. It is still cooking. ;)",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
     href: "#contact",
