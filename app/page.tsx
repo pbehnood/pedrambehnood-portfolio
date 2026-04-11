@@ -1,73 +1,81 @@
-type Project = {
-  title: string;
-  category: string;
-  summary: string;
-  outcome: string;
-  href: string;
-};
+import Image from "next/image";
 
-const projects: Project[] = [
+const metrics = [
+  { value: "12+", label: "Product launches" },
+  { value: "4 yrs", label: "Designing for growth" },
+  { value: "92%", label: "Usability clarity score" },
+];
+
+const projects = [
   {
-    title: "Portfolio Presentation",
-    category: "UX Portfolio",
-    summary:
-      "A presentation-style portfolio showcasing selected design work, visual thinking, and a structured storytelling approach.",
-    outcome: "View the interactive Figma prototype.",
-    href: "https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2",
+    title: "Banking App Redesign",
+    tag: "Fintech UX",
+    description:
+      "Redesigned onboarding, account setup, and first-use moments to make trust and progress feel immediate.",
+    image:
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Case Study Collection",
-    category: "UX Case Studies",
-    summary:
-      "A placeholder section for your upcoming case studies, product redesigns, research work, and interaction design projects.",
-    outcome: "Replace this with your next featured project.",
-    href: "https://www.behance.net/pedrambehnood",
+    title: "Health Data Dashboard",
+    tag: "Data Experience",
+    description:
+      "Translated dense reporting into a calmer decision dashboard with stronger hierarchy and role-based actions.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Professional Profile",
-    category: "Experience",
-    summary:
-      "A space to connect your design portfolio with your professional background, experience, and collaborations.",
-    outcome: "See your LinkedIn profile.",
-    href: "https://www.linkedin.com/in/pbehnood/",
+    title: "Shopping Flow Optimization",
+    tag: "Commerce UX",
+    description:
+      "Improved the browse-to-buy journey across mobile and desktop with simpler comparison and checkout moments.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
 const skills = [
-  "UX Research",
+  "Figma",
+  "Product Strategy",
+  "User Research",
+  "Journey Mapping",
   "Wireframing",
-  "Interaction Design",
-  "User Flows",
   "Prototyping",
+  "Design Systems",
   "Usability Testing",
   "Information Architecture",
-  "Design Systems",
-  "Responsive Design",
-  "Figma",
+  "Responsive UX",
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#" className="text-sm font-extrabold tracking-wide">
-            Pedram Behnood / UX
+    <main className="relative min-h-screen overflow-hidden bg-[#050816] text-white">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="aurora aurora-one" />
+        <div className="aurora aurora-two" />
+        <div className="aurora aurora-three" />
+        <div className="grid-overlay" />
+        <div className="vignette-overlay" />
+      </div>
+
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/45 backdrop-blur-2xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+          <a href="#" className="text-sm font-semibold tracking-[0.28em] text-white/90 uppercase">
+            Pedram Behnood
           </a>
 
-          <nav className="hidden gap-8 md:flex">
-            <a href="#work" className="text-sm text-slate-600 hover:text-slate-900">
+          <nav className="hidden items-center gap-8 md:flex">
+            <a href="#work" className="text-sm text-white/65 transition hover:text-white">
               Work
             </a>
-            <a href="#about" className="text-sm text-slate-600 hover:text-slate-900">
+            <a href="#about" className="text-sm text-white/65 transition hover:text-white">
               About
             </a>
-            <a href="#skills" className="text-sm text-slate-600 hover:text-slate-900">
+            <a href="#skills" className="text-sm text-white/65 transition hover:text-white">
               Skills
             </a>
             <a
               href="#contact"
-              className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700"
+              className="rounded-full border border-cyan-300/35 bg-white/6 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-cyan-200/50 hover:bg-white/10"
             >
               Contact
             </a>
@@ -75,236 +83,239 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:py-28">
+      <section className="relative mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-28 lg:pt-24">
         <div className="flex flex-col justify-center">
-          <span className="mb-5 inline-flex w-fit rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
-            UX Designer • Product Thinker • Portfolio
+          <span className="inline-flex w-fit rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs font-semibold tracking-[0.3em] text-cyan-100 uppercase shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+            UX Portfolio 2026
           </span>
 
-          <h1 className="max-w-3xl text-5xl font-black leading-tight tracking-tight md:text-6xl">
-            Designing thoughtful digital experiences with clarity, structure, and intent.
+          <h1 className="mt-7 max-w-4xl font-[family-name:var(--font-sora)] text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-balance md:text-7xl">
+            Designing digital products that feel sharp, calm, and unmistakably modern.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            I&apos;m Pedram Behnood, a UX designer focused on simplifying complex
-            products and shaping user-centered digital experiences. Explore my work,
-            professional background, and portfolio presentation below.
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+            I design product experiences that turn complexity into momentum.
+            From research and systems thinking to polished interface design, I
+            focus on flows that feel effortless for people and valuable for teams.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-9 flex flex-wrap gap-4">
             <a
               href="#work"
-              className="rounded-full bg-slate-900 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-700"
+              className="rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-100"
             >
-              View Projects
+              Explore Projects
             </a>
             <a
-              href="https://www.behance.net/pedrambehnood"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-900 transition hover:-translate-y-0.5"
+              href="#contact"
+              className="rounded-full border border-white/14 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
-              View Behance
+              Start a Conversation
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            {[
-              ["1", "Live portfolio prototype"],
-              ["2", "Professional profiles"],
-              ["10", "Core skills"],
-            ].map(([value, label]) => (
+          <div className="mt-12 grid gap-4 sm:grid-cols-3">
+            {metrics.map((metric) => (
               <div
-                key={label}
-                className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm"
+                key={metric.label}
+                className="rounded-3xl border border-white/10 bg-white/[0.045] px-5 py-5 shadow-[0_18px_60px_rgba(3,8,25,0.28)] backdrop-blur-xl"
               >
-                <div className="text-xl font-bold">{value}</div>
-                <div className="text-sm text-slate-600">{label}</div>
+                <div className="text-3xl font-semibold tracking-[-0.04em] text-white">
+                  {metric.value}
+                </div>
+                <div className="mt-2 text-sm text-slate-400">{metric.label}</div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative">
-          <div className="rounded-[32px] border border-slate-200 bg-white p-5 shadow-xl">
-            <div className="grid gap-4 rounded-[24px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 p-5 text-white">
-              <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                <div className="mb-2 text-xs uppercase tracking-[0.2em] text-white/70">
-                  Featured Project
-                </div>
-                <div className="text-2xl font-bold">Figma Portfolio Presentation</div>
-                <div className="mt-3 text-sm leading-6 text-white/85">
-                  An interactive portfolio prototype that presents selected work,
-                  visual direction, and structured storytelling.
-                </div>
+        <div className="relative flex items-center justify-center">
+          <div className="hero-glow absolute inset-x-12 inset-y-16 rounded-full blur-3xl" />
+
+          <div className="relative w-full max-w-xl">
+            <div className="animate-float-soft absolute -left-4 top-10 rounded-full border border-white/12 bg-slate-950/70 px-4 py-2 text-xs font-medium tracking-[0.18em] text-cyan-100 uppercase backdrop-blur-xl">
+              Research-led flows
+            </div>
+
+            <div className="panel-shell overflow-hidden rounded-[2rem] border border-white/12 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
+              <div className="overflow-hidden rounded-[1.6rem] border border-white/8 bg-slate-950/70">
+                <Image
+                  src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=80"
+                  alt="Workspace showing UX design process"
+                  width={1200}
+                  height={900}
+                  className="h-[540px] w-full object-cover"
+                  priority
+                />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-white p-4 text-slate-900">
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                    Platform
+              <div className="mt-4 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
+                <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
+                  <div className="text-xs tracking-[0.25em] text-slate-400 uppercase">
+                    Signature approach
                   </div>
-                  <div className="mt-2 text-lg font-bold">Figma Prototype</div>
+                  <p className="mt-3 text-sm leading-7 text-slate-200">
+                    Human insight, sharp hierarchy, and interface systems built
+                    to scale across product teams.
+                  </p>
                 </div>
-                <div className="rounded-2xl bg-white p-4 text-slate-900">
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                    Explore
+
+                <div className="rounded-[1.5rem] border border-cyan-300/20 bg-cyan-300/10 p-5">
+                  <div className="text-xs tracking-[0.25em] text-cyan-100 uppercase">
+                    Current focus
                   </div>
-                  <div className="mt-2 text-lg font-bold">Behance + LinkedIn</div>
+                  <p className="mt-3 text-sm leading-7 text-cyan-50">
+                    UX for fintech, dashboards, AI tools, and premium digital brands.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              <a
-                href="https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-2xl bg-white/10 p-4 text-sm font-semibold text-white/90 backdrop-blur hover:bg-white/15"
-              >
-                Open Figma portfolio →
-              </a>
+            <div className="animate-float-delayed absolute -bottom-4 right-2 rounded-[1.4rem] border border-white/12 bg-slate-950/75 px-5 py-4 text-sm font-medium text-slate-100 backdrop-blur-xl">
+              Web, mobile, systems, and strategy
             </div>
           </div>
         </div>
       </section>
 
-      <section id="work" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-bold">Selected Work</h2>
-        <p className="mt-3 max-w-2xl text-slate-600">
-          A starting point for showing your live portfolio, design presence, and future case studies.
-        </p>
+      <section id="work" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span className="section-label">Selected Work</span>
+            <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
+              Case studies with clarity, motion, and product depth.
+            </h2>
+          </div>
+          <p className="max-w-xl text-base leading-7 text-slate-400">
+            A curated set of projects focused on usability, product trust, and
+            visual systems that help teams ship with confidence.
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-[0_20px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl transition duration-300 hover:-translate-y-1.5 hover:border-white/18 hover:bg-white/[0.07]"
             >
-              <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                {project.category}
-              </span>
-              <h3 className="mt-4 text-xl font-bold">{project.title}</h3>
-              <p className="mt-3 leading-7 text-slate-600">{project.summary}</p>
-              <p className="mt-4 text-sm font-semibold text-slate-900">{project.outcome}</p>
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-5 inline-block font-semibold text-slate-900"
-              >
-                Open link →
-              </a>
+              <div className="overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={1200}
+                  height={800}
+                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div className="p-6">
+                <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-cyan-100 uppercase">
+                  {project.tag}
+                </span>
+                <h3 className="mt-5 font-[family-name:var(--font-sora)] text-2xl font-semibold tracking-[-0.03em] text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-3 leading-7 text-slate-300">{project.description}</p>
+                <a
+                  href="#contact"
+                  className="mt-6 inline-flex text-sm font-semibold tracking-[0.16em] text-white uppercase transition group-hover:text-cyan-100"
+                >
+                  View Case Study
+                </a>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="about" className="mx-auto grid max-w-6xl gap-6 px-6 py-20 lg:grid-cols-2">
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-bold">About</h2>
-          <p className="mt-4 leading-8 text-slate-600">
-            I design digital products with a focus on clarity, usability, and business
-            impact. My process starts with understanding users, mapping pain points,
-            and turning complex requirements into clear, effective experiences.
-          </p>
-          <p className="mt-4 leading-8 text-slate-600">
-            This site is a clean portfolio base connected to my Behance, LinkedIn,
-            and Figma presentation so it can grow into a fuller case-study portfolio over time.
-          </p>
+      <section
+        id="about"
+        className="relative mx-auto grid max-w-7xl gap-6 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8"
+      >
+        <div className="panel-shell rounded-[2rem] p-5">
+          <Image
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+            alt="Creative workspace"
+            width={1200}
+            height={900}
+            className="h-full rounded-[1.6rem] object-cover"
+          />
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-slate-900 p-8 text-white shadow-sm">
-          <h3 className="text-2xl font-bold">Where to find more of my work</h3>
-          <ul className="mt-5 space-y-3 text-white/85">
-            <li>
-              • Behance:{" "}
-              <a
-                href="https://www.behance.net/pedrambehnood"
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-              >
-                behance.net/pedrambehnood
-              </a>
-            </li>
-            <li>
-              • LinkedIn:{" "}
-              <a
-                href="https://www.linkedin.com/in/pbehnood/"
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-              >
-                linkedin.com/in/pbehnood
-              </a>
-            </li>
-            <li>
-              • Figma:{" "}
-              <a
-                href="https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2"
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-              >
-                Portfolio prototype
-              </a>
-            </li>
-          </ul>
+        <div className="panel-shell rounded-[2rem] p-8 md:p-10">
+          <span className="section-label">About</span>
+          <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
+            I build thoughtful experiences where the product story is as clear as the interface.
+          </h2>
+          <p className="mt-6 text-base leading-8 text-slate-300">
+            My process starts with understanding behavior, friction, and decision-making.
+            I like shaping products from the inside out: framing the problem,
+            simplifying the flow, and giving the final interface a strong sense
+            of rhythm and precision.
+          </p>
+          <p className="mt-5 text-base leading-8 text-slate-300">
+            I work across discovery, wireframes, prototypes, and polished systems,
+            always aiming for experiences that feel premium without losing clarity.
+          </p>
         </div>
       </section>
 
-      <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-3xl font-bold">Tools & Skills</h2>
-        <div className="mt-8 flex flex-wrap gap-3">
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-medium shadow-sm"
-            >
-              {skill}
-            </span>
-          ))}
+      <section id="skills" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="panel-shell rounded-[2rem] p-8 md:p-10">
+          <span className="section-label">Tools & Expertise</span>
+          <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
+            A UX toolkit shaped around research, systems, and visual precision.
+          </h2>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-cyan-300/25 hover:bg-cyan-300/10 hover:text-white"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="rounded-[32px] bg-slate-900 px-8 py-12 text-center text-white">
-          <h2 className="text-3xl font-bold">Let’s connect</h2>
-          <p className="mx-auto mt-4 max-w-2xl leading-8 text-white/80">
-            You can reach me through LinkedIn, explore my visual work on Behance,
-            or view my portfolio presentation on Figma.
+      <section id="contact" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="panel-shell relative overflow-hidden rounded-[2.2rem] px-8 py-12 text-center md:px-12">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/60 to-transparent" />
+          <span className="section-label justify-center">Contact</span>
+          <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
+            Let&apos;s build something meaningful and visually unforgettable.
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-300">
+            Available for freelance collaborations, product design roles, and
+            UX partnerships. Replace the placeholder links below with your real contact details.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="https://www.linkedin.com/in/pbehnood/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
+              href="mailto:yourname@email.com"
+              className="rounded-full bg-white px-5 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-100"
+            >
+              yourname@email.com
+            </a>
+            <a
+              href="#"
+              className="rounded-full border border-white/12 bg-white/[0.05] px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
             >
               LinkedIn
             </a>
             <a
-              href="https://www.behance.net/pedrambehnood"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
+              href="#"
+              className="rounded-full border border-white/12 bg-white/[0.05] px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
             >
               Behance
-            </a>
-            <a
-              href="https://www.figma.com/proto/83vrONnaAPPQcIDEIi1HIl/Presentation?page-id=0%3A1&node-id=1-2&viewport=113%2C251%2C0.06&t=DO0dKMkUe9ypVL3m-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A2"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/20 bg-white/10 px-5 py-3 font-semibold"
-            >
-              Figma Portfolio
             </a>
           </div>
         </div>
       </section>
 
-      <footer className="mx-auto max-w-6xl px-6 pb-10 text-center text-sm text-slate-500">
-        © 2026 Pedram Behnood. All rights reserved.
+      <footer className="relative mx-auto max-w-7xl px-6 pb-10 text-center text-sm text-slate-500 lg:px-8">
+        © 2026 Pedram Behnood. Designed for clarity, movement, and modern product storytelling.
       </footer>
     </main>
   );
