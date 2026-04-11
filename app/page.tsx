@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const metrics = [
   { value: "12+", label: "Product launches" },
@@ -8,20 +9,20 @@ const metrics = [
 
 const projects = [
   {
-    title: "Banking App Redesign",
-    tag: "Fintech UX",
+    title: "Enhancing One-Handed iPhone Use",
+    tag: "Interaction Design",
     description:
-      "Redesigned onboarding, account setup, and first-use moments to make trust and progress feel immediate.",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
+      "A concept case study exploring a more intuitive way to use larger iPhones comfortably with one hand.",
+    image: "/case-studies/one-handed-iphone/img2.webp",
+    href: "/work/one-handed-iphone-use",
   },
   {
-    title: "Health Data Dashboard",
-    tag: "Data Experience",
+    title: "Improving the Bruce App Experience",
+    tag: "Product UX",
     description:
-      "Translated dense reporting into a calmer decision dashboard with stronger hierarchy and role-based actions.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+      "A marketplace UX case study focused on engagement, clearer flows, and stronger value for both users and studios.",
+    image: "/case-studies/bruce-case1/hero-img.webp",
+    href: "/work/bruce-app-ux",
   },
   {
     title: "Shopping Flow Optimization",
@@ -30,6 +31,7 @@ const projects = [
       "Improved the browse-to-buy journey across mobile and desktop with simpler comparison and checkout moments.",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    href: "#contact",
   },
 ];
 
@@ -216,12 +218,12 @@ export default function HomePage() {
                   {project.title}
                 </h3>
                 <p className="mt-3 leading-7 text-slate-300">{project.description}</p>
-                <a
-                  href="#contact"
+                <Link
+                  href={project.href}
                   className="mt-6 inline-flex text-sm font-semibold tracking-[0.16em] text-white uppercase transition group-hover:text-cyan-100"
                 >
                   View Case Study
-                </a>
+                </Link>
               </div>
             </article>
           ))}
