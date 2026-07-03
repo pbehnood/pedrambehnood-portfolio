@@ -46,7 +46,7 @@ const conceptPrototypeImages = [
 
 export default function OneHandedIphoneUsePage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#050816] text-white">
+    <main className="paper-site relative min-h-screen overflow-hidden bg-[#050816] text-white">
       <div className="pointer-events-none absolute inset-0">
         <div className="aurora aurora-one" />
         <div className="aurora aurora-two" />

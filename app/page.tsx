@@ -10,314 +10,371 @@ const metrics = [
 const projects = [
   {
     title: "Enhancing One-Handed iPhone Use",
-    tag: "Interaction Design",
+    role: "Interaction design",
+    outcome: "A motion-led concept for making large iPhones easier to control.",
     description:
-      "A concept case study exploring a more intuitive way to use larger iPhones comfortably with one hand.",
+      "Research, reachability mapping, concept exploration, and high-fidelity motion prototyping for a more comfortable one-handed interaction.",
     image: "/case-studies/one-handed-iphone/img2.webp",
     href: "/work/one-handed-iphone-use",
+    color: "bg-[#ffe872]",
+    tags: ["Research", "Gesture design", "Prototype"],
   },
   {
     title: "Improving the Bruce App Experience",
-    tag: "Product UX",
+    role: "Product UX",
+    outcome: "A broader product vision for discovery, motivation, and studio value.",
     description:
-      "A marketplace UX case study focused on engagement, clearer flows, and stronger value for both users and studios.",
+      "A marketplace UX case study focused on engagement, clearer flows, and stronger product value for both users and fitness studios.",
     image: "/case-studies/bruce-case1/Cover.png",
     href: "/work/bruce-app-ux",
+    color: "bg-[#a8f0d4]",
+    tags: ["Strategy", "Mobile UX", "Retention"],
   },
   {
-    title: "To be updated",
-    tag: "Web application",
+    title: "Next case study",
+    role: "Web application",
+    outcome: "A placeholder board for the next product story.",
     description:
-      "This card will be upated with a case study that I have done before. It is still cooking. ;)",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      "A future case-study slot for another piece of design work, framed around context, process, evidence, and product outcome.",
+    image: "/case-studies/bruce-case1/lofi-design.webp",
     href: "#contact",
+    color: "bg-[#ffb49a]",
+    tags: ["Systems", "Interface", "Storytelling"],
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Frame",
+    description:
+      "Turn a fuzzy brief into product, user, and evidence questions worth answering.",
+  },
+  {
+    number: "02",
+    title: "Map",
+    description:
+      "Lay out journeys, decision points, assumptions, and places where people get stuck.",
+  },
+  {
+    number: "03",
+    title: "Prototype",
+    description:
+      "Create enough fidelity to test behavior, hierarchy, language, and product flow.",
+  },
+  {
+    number: "04",
+    title: "Measure",
+    description:
+      "Ship with learning goals, success signals, and a clear next iteration.",
   },
 ];
 
 const skills = [
   "Figma",
-  "Product Strategy",
-  "User Research",
-  "Journey Mapping",
+  "Product strategy",
+  "User research",
+  "Journey mapping",
   "Wireframing",
   "Prototyping",
-  "Design Systems",
-  "Usability Testing",
-  "Information Architecture",
+  "Design systems",
+  "Usability testing",
+  "Information architecture",
   "Responsive UX",
 ];
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#050816] text-white">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="aurora aurora-one" />
-        <div className="aurora aurora-two" />
-        <div className="aurora aurora-three" />
-        <div className="grid-overlay" />
-        <div className="vignette-overlay" />
-      </div>
-
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/45 backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#" className="text-sm font-semibold tracking-[0.28em] text-white/90 uppercase">
-            Pedram Behnood
+    <main className="min-h-screen bg-[#fbfaf4] text-[#111111]">
+      <header className="sticky top-0 z-50 border-b border-[#111111]/10 bg-[#fbfaf4]/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8">
+          <a href="#top" className="flex items-center gap-3 font-semibold">
+            <span className="grid h-9 w-9 place-items-center rounded-md border-2 border-[#111111] bg-white font-black shadow-[5px_5px_0_#111111]">
+              PB
+            </span>
+            <span>Pedram Behnood</span>
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
-            <a href="#work" className="text-sm text-white/65 transition hover:text-white">
+          <nav className="hidden items-center gap-6 text-sm text-[#4a4a4a] md:flex">
+            <a className="transition hover:text-[#111111]" href="#work">
               Work
             </a>
-            <a href="#about" className="text-sm text-white/65 transition hover:text-white">
+            <a className="transition hover:text-[#111111]" href="#process">
+              Process
+            </a>
+            <a className="transition hover:text-[#111111]" href="#about">
               About
             </a>
-            <a href="#skills" className="text-sm text-white/65 transition hover:text-white">
-              Skills
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full border border-cyan-300/35 bg-white/6 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-cyan-200/50 hover:bg-white/10"
-            >
+            <a className="transition hover:text-[#111111]" href="#contact">
               Contact
             </a>
           </nav>
+
+          <a
+            href="mailto:yourname@email.com"
+            className="solid-button solid-button-dark px-4 py-2 text-sm font-semibold"
+          >
+            Email me
+          </a>
         </div>
       </header>
 
-      <section className="relative mx-auto grid max-w-7xl gap-14 px-6 pb-20 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-28 lg:pt-24">
-        <div className="flex flex-col justify-center">
-          <span className="inline-flex w-fit rounded-full border border-white/12 bg-white/7 px-4 py-2 text-xs font-semibold tracking-[0.3em] text-cyan-100 uppercase shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
-            UX Portfolio 2026
-          </span>
+      <section
+        id="top"
+        className="canvas-grid relative overflow-hidden border-b border-[#111111]/10 px-5 py-12 sm:px-8 lg:py-16"
+      >
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="max-w-3xl">
+            <p className="mb-5 inline-flex rounded-md border-2 border-[#111111] bg-[#9ed9ff] px-3 py-1 text-sm font-bold shadow-[5px_5px_0_#111111]">
+              Product designer / UX researcher
+            </p>
+            <h1 className="text-5xl font-black leading-none sm:text-6xl lg:text-7xl">
+              Product decisions made visible.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4a4a4a] sm:text-xl">
+              I shape product experiences by making the path visible:
+              research, assumptions, interface decisions, prototypes, and the
+              evidence that helps teams move with confidence.
+            </p>
 
-          <h1 className="mt-7 max-w-4xl font-[family-name:var(--font-sora)] text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-balance md:text-7xl">
-            Designing digital products that feel sharp, calm, and unmistakably modern.
-          </h1>
-
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
-            I design product experiences that turn complexity into momentum.
-            From research and systems thinking to polished interface design, I
-            focus on flows that feel effortless for people and valuable for teams.
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-4">
-            <a
-              href="#work"
-              className="rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-100"
-            >
-              Explore Projects
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full border border-white/14 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
-            >
-              Start a Conversation
-            </a>
-          </div>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-3">
-            {metrics.map((metric) => (
-              <div
-                key={metric.label}
-                className="rounded-3xl border border-white/10 bg-white/[0.045] px-5 py-5 shadow-[0_18px_60px_rgba(3,8,25,0.28)] backdrop-blur-xl"
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#work"
+                className="solid-button solid-button-dark px-5 py-3 text-center font-semibold"
               >
-                <div className="text-3xl font-semibold tracking-[-0.04em] text-white">
-                  {metric.value}
+                View case studies
+              </a>
+              <a
+                href="#process"
+                className="solid-button bg-white px-5 py-3 text-center font-semibold"
+              >
+                See process
+              </a>
+            </div>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="board-card p-5">
+                  <div className="text-3xl font-black leading-none">
+                    {metric.value}
+                  </div>
+                  <div className="mt-3 text-sm font-semibold text-[#4a4a4a]">
+                    {metric.label}
+                  </div>
                 </div>
-                <div className="mt-2 text-sm text-slate-400">{metric.label}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="relative flex items-center justify-center">
-          <div className="hero-glow absolute inset-x-12 inset-y-16 rounded-full blur-3xl" />
+          <div className="whiteboard-stage" aria-label="Portfolio board preview">
+            <div className="connector connector-one" />
+            <div className="connector connector-two" />
+            <div className="cursor-tag cursor-one">Research lead</div>
+            <div className="cursor-tag cursor-two">Product team</div>
 
-          <div className="relative w-full max-w-xl">
-            <div className="animate-float-soft absolute -left-4 top-10 rounded-full border border-white/12 bg-slate-950/70 px-4 py-2 text-xs font-medium tracking-[0.18em] text-cyan-100 uppercase backdrop-blur-xl">
-              Research-led flows
-            </div>
-
-            <div className="panel-shell overflow-hidden rounded-[2rem] border border-white/12 p-4 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
-              <div className="overflow-hidden rounded-[1.6rem] border border-white/8 bg-slate-950/70">
-                <Image
-                  src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=80"
-                  alt="Workspace showing UX design process"
-                  width={1200}
-                  height={900}
-                  className="h-[540px] w-full object-cover"
-                  priority
-                />
+            <div className="artifact-card artifact-main">
+              <p className="text-sm font-bold text-[#4a4a4a]">
+                Case study frame
+              </p>
+              <h2 className="mt-2 text-2xl font-black">Problem to proof</h2>
+              <div className="mt-5 space-y-3">
+                <div className="h-3 w-5/6 rounded-sm bg-[#111111]/80" />
+                <div className="h-3 w-2/3 rounded-sm bg-[#111111]/35" />
+                <div className="h-3 w-4/5 rounded-sm bg-[#111111]/20" />
               </div>
-
-              <div className="mt-4 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
-                <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-5">
-                  <div className="text-xs tracking-[0.25em] text-slate-400 uppercase">
-                    Signature approach
-                  </div>
-                  <p className="mt-3 text-sm leading-7 text-slate-200">
-                    Human insight, sharp hierarchy, and interface systems built
-                    to scale across product teams.
-                  </p>
-                </div>
-
-                <div className="rounded-[1.5rem] border border-cyan-300/20 bg-cyan-300/10 p-5">
-                  <div className="text-xs tracking-[0.25em] text-cyan-100 uppercase">
-                    Current focus
-                  </div>
-                  <p className="mt-3 text-sm leading-7 text-cyan-50">
-                    UX for fintech, dashboards, AI tools, and premium digital brands.
-                  </p>
-                </div>
+              <div className="mt-6 grid grid-cols-3 gap-2">
+                <span className="h-14 rounded-md bg-[#ffe872]" />
+                <span className="h-14 rounded-md bg-[#a8f0d4]" />
+                <span className="h-14 rounded-md bg-[#cfc4ff]" />
               </div>
             </div>
 
-            <div className="animate-float-delayed absolute -bottom-4 right-2 rounded-[1.4rem] border border-white/12 bg-slate-950/75 px-5 py-4 text-sm font-medium text-slate-100 backdrop-blur-xl">
-              Web, mobile, systems, and strategy
+            <div className="sticky-note note-a">
+              Start with what changed for the user.
+            </div>
+            <div className="sticky-note note-b">Show the messy middle.</div>
+            <div className="sticky-note note-c">Outcome before artifact.</div>
+            <div className="stamp-card">
+              <span className="stamp-dot bg-[#ffb49a]" />
+              <span className="stamp-dot bg-[#9ed9ff]" />
+              <span className="stamp-dot bg-[#a8f0d4]" />
+              <strong>Evidence wins</strong>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="work" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="section-label">Selected Work</span>
-            <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
-              Case studies with clarity, motion, and product depth.
-            </h2>
+      <section id="work" className="px-5 py-16 sm:px-8 lg:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-sm font-black uppercase text-[#4a4a4a]">
+                Selected work
+              </p>
+              <h2 className="mt-2 text-4xl font-black sm:text-5xl">
+                Case studies with clear product evidence.
+              </h2>
+            </div>
+            <p className="max-w-xl leading-7 text-[#4a4a4a]">
+              Each project is structured around context, role, process, and the
+              artifact decisions that make the product direction easier to
+              understand.
+            </p>
           </div>
-          <p className="max-w-xl text-base leading-7 text-slate-400">
-            A curated set of projects focused on usability, product trust, and
-            visual systems that help teams ship with confidence.
-          </p>
-        </div>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          {projects.map((project) => (
-            <article
-              key={project.title}
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-[0_20px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl transition duration-300 hover:-translate-y-1.5 hover:border-white/18 hover:bg-white/[0.07]"
-            >
-              <div className="overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={1200}
-                  height={800}
-                  className="h-64 w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div className="p-6">
-                <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-cyan-100 uppercase">
-                  {project.tag}
-                </span>
-                <h3 className="mt-5 font-[family-name:var(--font-sora)] text-2xl font-semibold tracking-[-0.03em] text-white">
-                  {project.title}
-                </h3>
-                <p className="mt-3 leading-7 text-slate-300">{project.description}</p>
-                <Link
-                  href={project.href}
-                  className="mt-6 inline-flex text-sm font-semibold tracking-[0.16em] text-white uppercase transition group-hover:text-cyan-100"
-                >
-                  View Case Study
-                </Link>
-              </div>
-            </article>
-          ))}
+          <div className="grid gap-5 lg:grid-cols-3">
+            {projects.map((project) => (
+              <Link
+                key={project.title}
+                href={project.href}
+                className="block focus:outline-none focus-visible:ring-4 focus-visible:ring-[#111111]/20"
+              >
+                <article className="board-card flex h-full flex-col items-start gap-2 p-[22px] transition hover:-translate-y-1">
+                  <div
+                    className={`relative h-40 w-full shrink-0 overflow-hidden rounded-md border-2 border-[#111111] ${project.color} p-[18px]`}
+                  >
+                    <Image
+                      src={project.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 33vw, calc(100vw - 84px)"
+                      className="object-cover object-center"
+                    />
+                    <span className="relative z-10 w-max rounded-md border-2 border-[#111111] bg-white px-2.5 py-1.5 text-sm font-black">
+                      {project.role}
+                    </span>
+                  </div>
+                  <p className="w-full pt-3 text-sm font-black text-[#4a4a4a]">
+                    {project.role}
+                  </p>
+                  <h3 className="w-full text-2xl font-black">
+                    {project.title}
+                  </h3>
+                  <p className="w-full pb-3 pt-1 text-xl leading-7 text-[#4a4a4a]">
+                    {project.description}
+                  </p>
+                  <p className="w-full rounded-md border-2 border-[#111111] bg-[#fff36d] px-[14px] py-2.5 text-xl font-black leading-6">
+                    {project.outcome}
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-3">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md border border-[#111111]/20 bg-white px-3 py-[5px] text-sm text-[#4a4a4a]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       <section
-        id="about"
-        className="relative mx-auto grid max-w-7xl gap-6 px-6 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8"
+        id="process"
+        className="canvas-grid border-y border-[#111111]/10 px-5 py-16 sm:px-8 lg:py-20"
       >
-        <div className="panel-shell rounded-[2rem] p-5">
-          <Image
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
-            alt="Creative workspace"
-            width={1200}
-            height={900}
-            className="h-full rounded-[1.6rem] object-cover"
-          />
-        </div>
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-sm font-black uppercase text-[#4a4a4a]">
+              Process
+            </p>
+            <h2 className="mt-2 text-4xl font-black sm:text-5xl">
+              From open question to useful product decision.
+            </h2>
+          </div>
 
-        <div className="panel-shell rounded-[2rem] p-8 md:p-10">
-          <span className="section-label">About</span>
-          <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
-            I build thoughtful experiences where the product story is as clear as the interface.
-          </h2>
-          <p className="mt-6 text-base leading-8 text-slate-300">
-            My process starts with understanding behavior, friction, and decision-making.
-            I like shaping products from the inside out: framing the problem,
-            simplifying the flow, and giving the final interface a strong sense
-            of rhythm and precision.
-          </p>
-          <p className="mt-5 text-base leading-8 text-slate-300">
-            I work across discovery, wireframes, prototypes, and polished systems,
-            always aiming for experiences that feel premium without losing clarity.
-          </p>
-        </div>
-      </section>
-
-      <section id="skills" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="panel-shell rounded-[2rem] p-8 md:p-10">
-          <span className="section-label">Tools & Expertise</span>
-          <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
-            A UX toolkit shaped around research, systems, and visual precision.
-          </h2>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-cyan-300/25 hover:bg-cyan-300/10 hover:text-white"
-              >
-                {skill}
-              </span>
+          <div className="grid gap-4 md:grid-cols-4">
+            {processSteps.map((step) => (
+              <article key={step.number} className="board-card p-5">
+                <span className="text-sm font-black text-[#4a4a4a]">
+                  {step.number}
+                </span>
+                <h3 className="mt-5 text-2xl font-black">{step.title}</h3>
+                <p className="mt-3 leading-7 text-[#4a4a4a]">
+                  {step.description}
+                </p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="panel-shell relative overflow-hidden rounded-[2.2rem] px-8 py-12 text-center md:px-12">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/60 to-transparent" />
-          <span className="section-label justify-center">Contact</span>
-          <h2 className="mt-4 font-[family-name:var(--font-sora)] text-4xl font-semibold tracking-[-0.04em] text-white">
-            Let&apos;s build something meaningful and visually unforgettable.
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-300">
-            Available for freelance collaborations, product design roles, and
-            UX partnerships. Replace the placeholder links below with your real contact details.
-          </p>
+      <section id="about" className="px-5 py-16 sm:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="text-sm font-black uppercase text-[#4a4a4a]">
+              About
+            </p>
+            <h2 className="mt-2 text-4xl font-black sm:text-5xl">
+              A practical designer for ambiguous product spaces.
+            </h2>
+          </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="grid gap-5 md:grid-cols-2">
+            <article className="board-card bg-[#cfc4ff] p-6">
+              <h3 className="text-2xl font-black">Design point of view</h3>
+              <p className="mt-4 leading-7">
+                I like shaping products from the inside out: understanding
+                behavior, simplifying the flow, and giving the final interface
+                a strong sense of rhythm and precision.
+              </p>
+            </article>
+
+            <article className="board-card p-6">
+              <h3 className="text-2xl font-black">Toolkit</h3>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-md border-2 border-[#111111] bg-white px-3 py-2 text-sm font-semibold"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        className="border-t border-[#111111]/10 bg-[#111111] px-5 py-16 text-white sm:px-8"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 md:flex-row md:items-center">
+          <div>
+            <p className="text-sm font-black uppercase text-white/70">
+              Contact
+            </p>
+            <h2 className="mt-2 max-w-2xl text-4xl font-black sm:text-5xl">
+              Ready to turn the next ambiguous brief into a clearer experience.
+            </h2>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
             <a
               href="mailto:yourname@email.com"
-              className="rounded-full bg-white px-5 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-100"
+              className="solid-button-light bg-white px-5 py-3 text-center font-semibold text-[#111111]"
             >
               yourname@email.com
             </a>
             <a
               href="#"
-              className="rounded-full border border-white/12 bg-white/[0.05] px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
+              className="solid-button-light px-5 py-3 text-center font-semibold"
             >
               LinkedIn
-            </a>
-            <a
-              href="#"
-              className="rounded-full border border-white/12 bg-white/[0.05] px-5 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
-            >
-              Behance
             </a>
           </div>
         </div>
       </section>
 
-      <footer className="relative mx-auto max-w-7xl px-6 pb-10 text-center text-sm text-slate-500 lg:px-8">
-        © 2026 Pedram Behnood. Designed for clarity, movement, and modern product storytelling.
+      <footer className="bg-[#111111] px-5 pb-8 text-center text-sm text-white/65 sm:px-8">
+        © 2026 Pedram Behnood. Portfolio work with clear evidence and useful
+        product artifacts.
       </footer>
     </main>
   );
